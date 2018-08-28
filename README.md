@@ -20,7 +20,7 @@ Once your `tomcat` server is up and running you can access the RESTful Web Servi
 There are only two method available for consumption that this Web Service offers.
 
 
-**/root**
+* **/root**
 
 **Request Method Type:** GET
 
@@ -31,7 +31,7 @@ This allows you retrieve the filesystem's root directory information.
 **Example:**`http://localhost:8080/filesystem-restful-api/rest/Filesystem/root`
 
 
-**/path/{path}**
+* **/path/{path}**
 
 **Request Method Type:** GET
 
