@@ -13,7 +13,34 @@ All that is required for you to get your environment up and running is as follow
 
 There consists various ways to setup this web service (i.e. actual web server setup), but to keep things simple all that is required to build this application is to run `tomcat` or equivalent, this will deploy the app.
 
-Once the command has been executed successfully, a URL will be generated that you can visit (i.e. `Laravel development server started: <http://127.0.0.1:8000>`) to see the application in action.
+Once your `tomcat` server is up and running you can access the RESTful Web Service by means of your `localhost` port and the project name (`filesystem-restful-api`), i.e. `http://localhost:8080/filesystem-restful-api/rest/Filesystem/`.
+
+**Consuming the RESTful Web Service**
+
+There are only two method available for consumption that this Web Service offers.
+
+
+**/root**
+
+**Request Method Type:** GET
+
+**Request Response Produces:** XML
+
+This allows you retrieve the filesystem's root directory information.
+
+**Example:**`http://localhost:8080/filesystem-restful-api/rest/Filesystem/root`
+
+
+**/path/{path}**
+
+**Request Method Type:** GET
+
+**Request Response Produces:** XML
+
+This allows you retrieve the specified path's filesystem directory information.
+
+**Example:**`http://localhost:8080/filesystem-restful-api/rest/Filesystem/path/C:\`
+
 
 **Want to Contribute?**
 
