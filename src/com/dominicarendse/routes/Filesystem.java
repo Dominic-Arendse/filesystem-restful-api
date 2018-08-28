@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -32,5 +33,19 @@ public class Filesystem {
 	@Produces(MediaType.APPLICATION_XML)
 	public List<FileObject> root() throws IOException {
 		return FilesystemController.root();
+	}
+	
+	/**
+	 * Retrieves the specified path's filesystem directory information.
+	 *
+	 * @throw IOException if the directory or file instance cannot be found.
+	 *
+	 * @return List<?>
+	 */
+	@GET
+	@Path("/path/{path}")
+	@Produces(MediaType.APPLICATION_XML)
+	public List<FileObject> path(@PathParam("path") String path) throws IOException {
+		return FilesystemController.getListing(path);
 	}
 }
