@@ -134,4 +134,19 @@ public class FileObject {
 	public void setSize(double size) {
 		this.size = size;
 	}
+	
+	/**
+	 * Returns a valid string representative of the FileObject.
+	 * 
+	 * @override toString() so that a valid string representative of the FileObject can be built.
+	 * 
+	 * @return String
+	 */
+	@Override
+    public String toString() {
+		return "\npath: " + this.getPath() +
+				"\ndatetimeLastUpdated: " + this.getDatetimeLastUpdatedFormatted() +
+				"\nisDirectory: " + this.getIsDirectory() +
+				"\nsize (bytes): " + this.getSize();
+    }
 }

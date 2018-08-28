@@ -43,7 +43,7 @@ public class Filesystem {
 	 * @return List<?>
 	 */
 	@GET
-	@Path("/path/{path}")
+	@Path("/path/{path: .*}")
 	@Produces(MediaType.APPLICATION_XML)
 	public List<FileObject> path(@PathParam("path") String path) throws IOException {
 		return FilesystemController.getListing(path);

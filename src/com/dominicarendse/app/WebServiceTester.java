@@ -1,5 +1,7 @@
 package com.dominicarendse.app;
 
+import java.io.IOException;
+
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
@@ -27,7 +29,7 @@ public class WebServiceTester  {
 	 *
 	 * @return void
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// Creates an instance of the Web Service Tester.
 		WebServiceTester tester = new WebServiceTester();
 	    
